@@ -350,6 +350,9 @@ const projectId = toRef(props, 'projectId')
 const DRAG_OPTIONS = {
 	// sortable options
 	animation: 150,
+	// Sortable's default (30px) is too thin to reach the bucket off screen; a pointer
+	// near the board edge should start scrolling it, about a third of a bucket wide.
+	scrollSensitivity: 100,
 	ghostClass: 'ghost',
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
